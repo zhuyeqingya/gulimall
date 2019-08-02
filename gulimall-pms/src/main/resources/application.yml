@@ -1,0 +1,13 @@
+server:
+  port: 10000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.111.129:3306/guli_pms?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 883721
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/pms/*.xml

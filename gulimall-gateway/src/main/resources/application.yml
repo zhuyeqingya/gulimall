@@ -1,0 +1,17 @@
+server:
+  port: 88
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: world_route
+          uri: lb://gulimall-pms
+          predicates:
+            - Path=/world
+        - id: hello_route
+          uri: lb://gulimall-oms
+          predicates:
+            - Path=/hello
+          filters:
+            - AddResponseHeader=djg,123
